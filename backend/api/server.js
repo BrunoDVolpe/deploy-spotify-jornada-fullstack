@@ -2,11 +2,12 @@ import express from 'express'
 import cors from "cors"
 import { db } from './connect.js'
 import path from 'path'
+import 'dotenv/config'
 
 const __dirname = path.resolve()
 
 const app = express()
-const PORT = 3001 // Rodar esse servidor como: node --watch ./api/server.js
+const PORT = process.env.PORT // Rodar esse servidor como: node --watch ./api/server.js
 
 app.use(cors()) //middleware para ajudar a resolver problemas de domínios diferentes
 //app.use(express.json()) //exemplo de middleware

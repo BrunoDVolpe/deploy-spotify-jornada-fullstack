@@ -1,8 +1,8 @@
 import { MongoClient } from "mongodb"
+import 'dotenv/config'
 
 // Senha Chocolate para testes.
-const URI = 
-"mongodb+srv://bdva16:Chocolate@cluster0.kolbypq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const URI = process.env.URI_MONGODB
 
 const client = new MongoClient(URI)
 
